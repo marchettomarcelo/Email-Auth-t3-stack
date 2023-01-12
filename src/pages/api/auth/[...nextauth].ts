@@ -2,9 +2,10 @@ import NextAuth, { type NextAuthOptions } from "next-auth";
 // Prisma adapter for NextAuth, optional and can be removed
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { createTransport } from "nodemailer";
-
+import { allEmails, getPersonByEmail } from "../../../utils/gamb";
 import { prisma } from "../../../server/db";
 import EmailProvider from "next-auth/providers/email";
+import { type gasPerson } from "pessoa";
 
 export const authOptions: NextAuthOptions = {
   // Include user.id on session
@@ -17,8 +18,27 @@ export const authOptions: NextAuthOptions = {
     },
   },
   events: {
-    createUser(message) {
-      console.log("User created", message);
+    async createUser(message) {
+        if (!message.user.email) return;
+      
+        const pessoa = getPersonByEmail(message.user.email) as gasPerson;
+  
+        await prisma.profile.create({
+          data: {
+            userId: message.user.id,
+            cargo: pessoa.cargo,
+            areas: { set: pessoa.areas },
+            projetos: { set: pessoa.projetos },
+          },
+        });
+
+        await prisma.user.update({
+          where: { id: message.user.id },
+          data: {
+            name: pessoa.nome,
+          }
+        });
+
     },
   },
   // Configure one or more authentication providers
@@ -42,9 +62,8 @@ export const authOptions: NextAuthOptions = {
         const { host } = new URL(url);
         const transport = createTransport(server);
 
-        // Place your whitelisted emails below
-        
-        if (!["marchetto.marcelo@gmail.com"].includes(email)) {
+        const validEmails = allEmails();
+        if (!validEmails.includes(email)) {
           const result = await transport.sendMail({
             to: email,
             from: from,

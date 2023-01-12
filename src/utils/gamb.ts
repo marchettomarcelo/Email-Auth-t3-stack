@@ -54,8 +54,15 @@ function validEmails(email: string) {
   return pessoas.some(({ email: e }) => e === email);
 }
 
-const x = validEmails("marianagc5@al.insper.edu.br");
+function getPersonByEmail(email: string) {
+  return pessoas.find(({ email: e }) => e === email);
+}
 
-console.log(x);
-
-export {};
+export {
+  allEmails,
+  allEmailsByArea,
+  allEmailsByProjeto,
+  allEmailsByCargo,
+  validEmails,
+  getPersonByEmail,
+};
