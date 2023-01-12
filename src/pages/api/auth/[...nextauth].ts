@@ -43,6 +43,7 @@ export const authOptions: NextAuthOptions = {
         const transport = createTransport(server);
 
         // Place your whitelisted emails below
+        
         if (!["marchetto.marcelo@gmail.com"].includes(email)) {
           const result = await transport.sendMail({
             to: email,
