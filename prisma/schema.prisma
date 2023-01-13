@@ -50,7 +50,7 @@ model Session {
 model User {
   id            String    @id @default(cuid())
   profile       Profile?
-  name          String?
+  
   email         String?   @unique
   emailVerified DateTime?
   image         String?
@@ -95,6 +95,9 @@ enum CARGOS {
 
 model Profile {
   id     String @id @default(cuid())
+
+  nome   String?
+
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId String @unique
 

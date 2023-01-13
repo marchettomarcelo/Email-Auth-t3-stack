@@ -19,26 +19,19 @@ export const authOptions: NextAuthOptions = {
   },
   events: {
     async createUser(message) {
-        if (!message.user.email) return;
-      
-        const pessoa = getPersonByEmail(message.user.email) as gasPerson;
-  
-        await prisma.profile.create({
-          data: {
-            userId: message.user.id,
-            cargo: pessoa.cargo,
-            areas: { set: pessoa.areas },
-            projetos: { set: pessoa.projetos },
-          },
-        });
+      if (!message.user.email) return;
 
-        await prisma.user.update({
-          where: { id: message.user.id },
-          data: {
-            name: pessoa.nome,
-          }
-        });
+      const pessoa = getPersonByEmail(message.user.email) as gasPerson;
 
+      await prisma.profile.create({
+        data: {
+          nome: pessoa.nome,
+          userId: message.user.id,
+          cargo: pessoa.cargo,
+          areas: { set: pessoa.areas },
+          projetos: { set: pessoa.projetos },
+        },
+      });
     },
   },
   // Configure one or more authentication providers
