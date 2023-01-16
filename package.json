@@ -6,6 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "deleteUsers": "ts-node scripts/deleteUsers.ts",
+    "createUsers": "ts-node scripts/createUsers.ts",
     "postinstall": "prisma generate",
     "lint": "next lint",
     "start": "next start"

@@ -99,8 +99,8 @@ model Profile {
   nome   String?
   username String @unique
 
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId String @unique
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String? @unique
 
   projetos PROJETOS[]
   areas    AREAS[]

@@ -25,16 +25,32 @@ export const authOptions: NextAuthOptions = {
 
       const username = message.user.email.split("@")[0] as string;
 
-      await prisma.profile.create({
-        data: {
-          username: username,
-          nome: pessoa.nome,
-          userId: message.user.id,
-          cargo: pessoa.cargo,
-          areas: { set: pessoa.areas },
-          projetos: { set: pessoa.projetos },
-        },
+      // check if user already exists
+
+      const userExists = await prisma.profile.findUnique({
+        where: { username: username },
       });
+
+      if (userExists) {
+        
+        await prisma.profile.update({
+          where: { username: username },
+          data: {
+            userId: message.user.id,
+          },
+        });
+      } else {
+        await prisma.profile.create({
+          data: {
+            username: username,
+            nome: pessoa.nome,
+            userId: message.user.id,
+            cargo: pessoa.cargo,
+            areas: { set: pessoa.areas },
+            projetos: { set: pessoa.projetos },
+          },
+        });
+      }
     },
   },
   // Configure one or more authentication providers
