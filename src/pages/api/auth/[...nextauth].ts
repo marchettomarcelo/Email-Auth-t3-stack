@@ -23,8 +23,11 @@ export const authOptions: NextAuthOptions = {
 
       const pessoa = getPersonByEmail(message.user.email) as gasPerson;
 
+      const username = message.user.email.split("@")[0] as string;
+
       await prisma.profile.create({
         data: {
+          username: username,
           nome: pessoa.nome,
           userId: message.user.id,
           cargo: pessoa.cargo,

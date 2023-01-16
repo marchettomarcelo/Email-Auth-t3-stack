@@ -97,6 +97,7 @@ model Profile {
   id     String @id @default(cuid())
 
   nome   String?
+  username String @unique
 
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId String @unique
