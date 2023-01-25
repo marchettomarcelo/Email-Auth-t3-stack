@@ -4,20 +4,34 @@
     "email": "marianagc5@al.insper.edu.br",
     "areas": [],
     "projetos": [],
-    "cargo": "MEMBRO"
+    "cargo": "DIRETOR"
   },
   {
-    "nome": "Marcelo Marchetto",
+    "nome": "Marcelo Marchetto GMAIL",
     "email": "marchetto.marcelo@gmail.com",
     "areas": ["FINANCEIRO"],
     "projetos": ["PONTUAIS"],
     "cargo": "MEMBRO"
   },
   {
-    "nome": "Marcelo Marchetto 2",
+    "nome": "Marcelo Marchetto INSP",
     "email": "marcelovfm@al.insper.edu.br",
-    "areas": [],
+    "areas": ["FINANCEIRO"],
     "projetos": [],
     "cargo": "DIRETOR"
+  },
+  {
+    "nome": "Marcelo Marchetto 3",
+    "email": "marcelovfm3@al.insper.edu.br",
+    "areas": ["MARKETING"],
+    "projetos": [],
+    "cargo": "DIRETOR"
+  },
+  {
+    "nome": "Marcelo Marchetto 4",
+    "email": "marcelovf4m@al.insper.edu.br",
+    "areas": [],
+    "projetos": ["PONTUAIS"],
+    "cargo": "LIDER"
   }
 ]
