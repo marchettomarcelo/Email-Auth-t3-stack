@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 function MinhasOcorrencias() {
   const { username } = useRouter().query;
-  const { data, isLoading, error, isError } =
+  const {  isLoading, isError } =
     api.ocorrencias.minhasOcorrencias.useQuery(
       {
         username: username as string,

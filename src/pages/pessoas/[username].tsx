@@ -1,14 +1,14 @@
 import { useRouter } from "next/router";
 import Header from "../../components/Header";
 import { api } from "../../utils/api";
-import Image from "next/image";
+
 import MinhasOcorrencias from "../../components/MinhasOcorrencias";
 import CriarOcorrencias from "../../components/CriarOcorrencias";
 
 function PerfilPessoas() {
   const { username } = useRouter().query;
 
-  const { data, isLoading, error } =
+  const { data, isLoading } =
     api.profile.getProfileFromUsername.useQuery(
       { username: username as string },
       {
