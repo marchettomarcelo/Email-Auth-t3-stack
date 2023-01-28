@@ -7,7 +7,33 @@ import Header from "../components/Header";
 const Home: NextPage = () => {
   const { status } = useSession();
 
-  
+  let button = <></>;
+
+  if (status === "authenticated") {
+    button = (
+      <button
+        className=" rounded border-2 border-gray-200 py-4 px-8 text-lg font-bold shadow-2xl"
+        onClick={() => signOut()}
+      >
+        Sign Out
+      </button>
+    );
+  } else if (status === "unauthenticated") {
+    button = (
+      <button
+        className=" rounded border-2 border-gray-200 py-4 px-8 text-lg font-bold shadow-2xl"
+        onClick={() => signIn()}
+      >
+        Login
+      </button>
+    );
+  } else if (status === "loading") {
+    button = (
+      <button className=" rounded border-2 border-gray-200 py-4 px-8 text-lg font-bold shadow-2xl">
+        Loading
+      </button>
+    );
+  }
 
   return (
     <>
@@ -22,21 +48,7 @@ const Home: NextPage = () => {
           <p className="text-8xl">Insper</p>
         </h1>
 
-        {status !== "authenticated" ? (
-          <button
-            className=" rounded border-2 border-gray-200 py-4 px-8 text-lg font-bold shadow-2xl"
-            onClick={() => signIn()}
-          >
-            Login
-          </button>
-        ) : (
-          <button
-            className=" rounded border-2 border-gray-200 py-4 px-8 text-lg font-bold shadow-2xl"
-            onClick={() => signOut()}
-          >
-            Sign Out
-          </button>
-        )}
+        {button}
       </main>
     </>
   );
