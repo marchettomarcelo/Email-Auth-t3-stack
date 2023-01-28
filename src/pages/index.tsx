@@ -13,7 +13,7 @@ const Home: NextPage = () => {
     button = (
       <button
         className=" rounded border-2 border-gray-200 py-4 px-8 text-lg font-bold shadow-2xl"
-        onClick={async () => await signOut()}
+        onClick={async () => await signOut().finally()}
       >
         Sign Out
       </button>
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
     button = (
       <button
         className=" rounded border-2 border-gray-200 py-4 px-8 text-lg font-bold shadow-2xl"
-        onClick={async () => await signIn()}
+        onClick={async () => await signIn().finally()}
       >
         Login
       </button>
