@@ -15,16 +15,13 @@ export const profileRouter = createTRPCRouter({
       })
     )
     .query(async ({ ctx, input }) => {
+
       const profile = await ctx.prisma.profile.findUnique({
         where: {
           username: input.username,
         },
-
-        include: {
-          user: true,
-          
-        },
       });
+
       return profile;
     }),
 });

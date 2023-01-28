@@ -2,17 +2,21 @@ import { useRouter } from "next/router";
 import Header from "../../components/Header";
 import { api } from "../../utils/api";
 import Image from "next/image";
+import MinhasOcorrencias from "../../components/MinhasOcorrencias";
+import CriarOcorrencias from "../../components/CriarOcorrencias";
 
 function PerfilPessoas() {
   const { username } = useRouter().query;
 
-  const { data, isLoading } = api.profile.getProfileFromUsername.useQuery(
-    { username: username as string },
-    {
-      enabled: !!username,
-    }
-  );
+  const { data, isLoading, error } =
+    api.profile.getProfileFromUsername.useQuery(
+      { username: username as string },
+      {
+        enabled: !!username,
+      }
+    );
 
+ 
   let PageContent = <></>;
 
   if (isLoading) {
@@ -34,8 +38,10 @@ function PerfilPessoas() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-4">
       <Header />
-
       {PageContent}
+
+      <MinhasOcorrencias />
+      <CriarOcorrencias />
     </main>
   );
 }

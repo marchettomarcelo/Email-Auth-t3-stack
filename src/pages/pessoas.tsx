@@ -2,7 +2,7 @@ import { api } from "../utils/api";
 import Header from "../components/Header";
 import Link from "next/link";
 
-function CriarOcorrencias() {
+function DiretorioMembros() {
   const pessoas = api.profile.getAllUsers.useQuery();
 
   return (
@@ -31,4 +31,4 @@ function CriarOcorrencias() {
   );
 }
 
-export default CriarOcorrencias;
+export default DiretorioMembros;
