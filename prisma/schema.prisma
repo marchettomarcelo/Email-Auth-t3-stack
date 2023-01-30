@@ -107,7 +107,7 @@ model Profile {
 
 model Ocorrencia {
   id        String   @id @default(cuid())
-  data      DateTime
+  data      DateTime 
   titulo    String
   descricao String
 
