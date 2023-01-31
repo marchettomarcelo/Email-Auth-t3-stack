@@ -22,6 +22,13 @@ function CriarOcorrencias() {
     }
   );
 
+  const utils = api.useContext();
+  const criarOcorrencia = api.ocorrencias.criarOcorrencia.useMutation({
+    onSuccess: () => {
+      utils.ocorrencias.minhasOcorrencias.invalidate();
+    },
+  });
+
   // ------------
 
   if (data === true) {
@@ -43,7 +50,12 @@ function CriarOcorrencias() {
             pontos: 0,
           }}
           onSubmit={(values: Values) => {
-            console.log(values);
+            criarOcorrencia.mutate({
+              descricao: values.descricao,
+              titulo: values.titulo,
+              pontos: values.pontos,
+              username: username as string,
+            });
           }}
         >
           <Form className="flex flex-col items-center gap-4">

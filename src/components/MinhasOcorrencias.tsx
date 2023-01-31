@@ -21,15 +21,18 @@ function MinhasOcorrencias() {
     return (
       <div className="w-full">
         <h1 className="text-lg">Aqui estão as suas ocorrencias:</h1>
-        {data.map((ocorrencia, index) => {
-          return (
-            <CardOcorrencia
-              key={index}
-              ocorrencia={ocorrencia}
-              responsavel={ocorrencia.responsavel}
-            />
-          );
-        })}
+
+        <div className="flex flex-col gap-4">
+          {data.map((ocorrencia, index) => {
+            return (
+              <CardOcorrencia
+                key={index}
+                ocorrencia={ocorrencia}
+                responsavel={ocorrencia.responsavel}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }
