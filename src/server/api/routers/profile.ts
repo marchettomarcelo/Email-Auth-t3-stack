@@ -2,6 +2,8 @@ import { z } from "zod";
 
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 
+
+
 export const profileRouter = createTRPCRouter({
   getAllUsers: protectedProcedure.query(({ ctx }) => {
     const pessoas = ctx.prisma.profile.findMany();
@@ -15,7 +17,6 @@ export const profileRouter = createTRPCRouter({
       })
     )
     .query(async ({ ctx, input }) => {
-
       const profile = await ctx.prisma.profile.findUnique({
         where: {
           username: input.username,
@@ -24,4 +25,14 @@ export const profileRouter = createTRPCRouter({
 
       return profile;
     }),
+
+  getProfileFromSession: protectedProcedure.query(async ({ ctx }) => {
+    const profile = await ctx.prisma.profile.findUnique({
+      where: {
+        userId: ctx.session.user.id,
+      },
+    });
+
+    return profile;
+  }),
 });

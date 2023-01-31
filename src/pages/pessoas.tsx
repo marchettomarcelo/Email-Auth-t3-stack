@@ -17,11 +17,14 @@ function DiretorioMembros() {
             key={pessoa.id}
             className="w-3/5 rounded-md border p-4 shadow-md"
           >
-            <div className="flex flex-col gap-1">
+            <div className="flex w-full flex-col gap-1">
               <h2 className="text-xl font-bold">{pessoa.nome}</h2>
 
-              <div className="flex flex-row">
-                {pessoa.areas} do {pessoa.projetos}
+              <div className="flex w-full flex-row gap-2">
+                <p>Cargo: {pessoa.cargo} </p> <p>Área: {pessoa.areas}</p>{" "}
+                {pessoa.projetos.length !== 0 && (
+                  <p>Projeto: {pessoa.projetos}</p>
+                )}
               </div>
             </div>
           </Link>
