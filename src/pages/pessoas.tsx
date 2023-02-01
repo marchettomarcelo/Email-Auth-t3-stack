@@ -9,7 +9,7 @@ function DiretorioMembros() {
     <main className="flex min-h-screen flex-col items-center gap-4">
       <Header />
 
-      <h1 className="text-2xl font-bold">Todos os bananas do gas:</h1>
+      <h1 className="text-2xl font-bold">Todos os integrantes do gas:</h1>
       <div className="flex w-full flex-col items-center gap-4">
         {pessoas.data?.map((pessoa) => (
           <Link

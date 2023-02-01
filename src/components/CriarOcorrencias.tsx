@@ -67,7 +67,7 @@ function CriarOcorrencias() {
                 id="titulo"
                 name="titulo"
                 className="rounded border border-black p-2"
-                placeholder="Falou mal"
+                placeholder="escreve alguma coisa ai sla"
               />
             </div>
 
@@ -79,7 +79,7 @@ function CriarOcorrencias() {
                 id="descricao"
                 className="rounded border border-black p-2"
                 name="descricao"
-                placeholder="n gostou"
+                placeholder="cometeu um crime"
               />
             </div>
 
@@ -108,8 +108,6 @@ function CriarOcorrencias() {
     );
   } else if (data === false) {
     console.log("Voce nao pode criar ocorrencias para essa pessoa");
-
-    return <div>Criar ocorrencia para: </div>;
   } else {
     return null;
   }
