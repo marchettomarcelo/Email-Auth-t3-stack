@@ -108,8 +108,9 @@ function CriarOcorrencias() {
     );
   } else if (data === false) {
     console.log("Voce nao pode criar ocorrencias para essa pessoa");
+    return <></>;
   } else {
-    return null;
+    return <></>;
   }
 }
 
