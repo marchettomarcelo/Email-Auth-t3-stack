@@ -22,9 +22,6 @@ export const authOptions: NextAuthOptions = {
     async createUser(message) {
       if (!message.user.email) return;
 
-      prisma.verificationToken.delete({
-        where: { },
-      })
 
       const pessoa = getPersonByEmail(message.user.email) as gasPerson;
 

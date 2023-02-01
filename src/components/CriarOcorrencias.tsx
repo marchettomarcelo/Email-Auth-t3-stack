@@ -24,8 +24,8 @@ function CriarOcorrencias() {
 
   const utils = api.useContext();
   const criarOcorrencia = api.ocorrencias.criarOcorrencia.useMutation({
-    onSuccess: () => {
-      utils.ocorrencias.minhasOcorrencias.invalidate();
+    onSuccess: async () => {
+      await utils.ocorrencias.minhasOcorrencias.invalidate();
     },
   });
 
@@ -49,7 +49,7 @@ function CriarOcorrencias() {
             descricao: "",
             pontos: 0,
           }}
-          onSubmit={(values: Values) => {
+          onSubmit={  (values: Values) => {
             criarOcorrencia.mutate({
               descricao: values.descricao,
               titulo: values.titulo,
