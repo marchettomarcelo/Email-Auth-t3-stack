@@ -13,9 +13,9 @@ function Header() {
         <Image src={logo} alt="logo" width={150} height={150} />{" "}
       </Link>
 
-      <div className="flex flex-col items-end justify-end">
+      <Link href={`/pessoas/${data?.username}`}>
         <p className="font-semibold italic text-white">{data?.nome}</p>
-      </div>
+      </Link>
     </header>
   );
 }
