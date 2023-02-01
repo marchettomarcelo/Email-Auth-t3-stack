@@ -1,7 +1,6 @@
 import { api } from "../utils/api";
 import { useRouter } from "next/router";
 import CardOcorrencia from "./CardOcorrencia";
-import { isError } from "@tanstack/react-query";
 
 function MinhasOcorrencias() {
   const { username } = useRouter().query;

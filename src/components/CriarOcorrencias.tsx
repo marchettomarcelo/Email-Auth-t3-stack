@@ -1,12 +1,12 @@
 import { api } from "../utils/api";
 import { useRouter } from "next/router";
-import { Formik, Field, Form, FormikHelpers } from "formik";
+import { Formik, Field, Form } from "formik";
 
 function CriarOcorrencias() {
   const { username } = useRouter().query;
 
   // ------ trcp stuff ------
-  const { data, error } = api.ocorrencias.podeCriarOcorrencia.useQuery(
+  const { data } = api.ocorrencias.podeCriarOcorrencia.useQuery(
     {
       username: username as string,
     },

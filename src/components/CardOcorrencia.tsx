@@ -1,4 +1,4 @@
-import { Ocorrencia, Profile } from "@prisma/client";
+import { type Ocorrencia, type Profile } from "@prisma/client";
 import Link from "next/link";
 
 function CardOcorrencia({
