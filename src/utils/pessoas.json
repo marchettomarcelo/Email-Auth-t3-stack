@@ -33,5 +33,33 @@
     "areas": [],
     "projetos": ["PONTUAIS"],
     "cargo": "LIDER"
+  },
+  {
+    "nome": "Rafaela Tomazela",
+    "email": "rafaelamt1@al.insper.edu.br",
+    "areas": ["MARKETING"],
+    "projetos": [],
+    "cargo": "DIRETOR"
+  },
+  {
+    "nome": "Alessia Pace",
+    "email": "alessiap@al.insper.edu.br",
+    "areas": ["GP"],
+    "projetos": [],
+    "cargo": "DIRETOR"
+  },
+  {
+    "nome": "Manoela Pimentel",
+    "email": "manoelabp@al.insper.edu.br",
+    "areas": ["FINANCEIRO"],
+    "projetos": [],
+    "cargo": "DIRETOR"
+  },
+  {
+    "nome": "Isabella Brunele",
+    "email": "isabellamb2@al.insper.edu.br",
+    "areas": ["PROJETOS"],
+    "projetos": [],
+    "cargo": "DIRETOR"
   }
 ]
