@@ -31,7 +31,7 @@ import FileSaver from "file-saver";
 import * as XLSX from "xlsx";
 
 function App() {
-  const [data, setData] = useState([
+  const [data] = useState([
     ["name1", "city1", "some other info"],
     ["name2", "city2", "more info"],
   ]);

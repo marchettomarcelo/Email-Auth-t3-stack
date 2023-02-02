@@ -1,5 +1,4 @@
 import { api } from "../utils/api";
-import Header from "../components/Header";
 import Link from "next/link";
 import BaseLayout from "../components/BaseLayout";
 

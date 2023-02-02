@@ -5,7 +5,6 @@ import { api } from "../utils/api";
 
 function Header() {
   const { data } = api.profile.getProfileFromSession.useQuery();
-  console.log(data);
   return (
     <header className="flex h-24 w-full flex-row items-center justify-between bg-gradient-to-r from-[#B90B23] via-red-700 to-red-600 p-4">
       <Link href="/">
@@ -13,9 +12,11 @@ function Header() {
         <Image src={logo} alt="logo" width={150} height={150} />{" "}
       </Link>
 
-      <Link href={`/pessoas/${data?.username}`}>
-        <p className="font-semibold italic text-white">{data?.nome}</p>
-      </Link>
+      {data && (
+        <Link href={`/pessoas/${data.username}`}>
+          <p className="font-semibold italic text-white">{data?.nome}</p>
+        </Link>
+      )}
     </header>
   );
 }
