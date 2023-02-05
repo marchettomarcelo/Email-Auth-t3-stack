@@ -58,7 +58,12 @@ function getPersonByEmail(email: string) {
   return pessoas.find(({ email: e }) => e === email);
 }
 
+function allNames() {
+  return pessoas.map(({ nome }) => nome);
+}
+
 export {
+  allNames,
   allEmails,
   allEmailsByArea,
   allEmailsByProjeto,

@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 import podeCriarOcorrencia from "../../../utils/PodeCriarOcorrencia";
+import { allNames } from "../../../utils/gamb";
 
 export const ocorrenciasRouter = createTRPCRouter({
   minhasOcorrencias: protectedProcedure
@@ -96,4 +97,36 @@ export const ocorrenciasRouter = createTRPCRouter({
 
       return ocorrencia;
     }),
+
+  excelFormatOcorrencias: protectedProcedure.query(async ({ ctx }) => {
+    const ocorrencias = await ctx.prisma.ocorrencia.findMany({
+      include: {
+        receptor: true,
+      },
+    });
+
+    console.log(ocorrencias);
+
+    let returnDate: any = allNames().map((name) => {
+      return [name, "", 0];
+    });
+
+    console.log(returnDate);
+
+    returnDate = returnDate.map((item: any) => {
+      const ocorrencia = ocorrencias.find(
+        (ocorrencia) => ocorrencia.receptor.nome === item[0]
+      );
+
+      if (ocorrencia) {
+        item[1] = item[1] + ocorrencia.titulo;
+        item[2] = item[2] + 
+        ocorrencia.pontosGanhos;
+      }
+
+      return item;
+    });
+
+    return returnDate;
+  }),
 });
