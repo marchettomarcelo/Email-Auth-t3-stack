@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import FileSaver from "file-saver";
 import * as XLSX from "xlsx";
 import { api } from "../utils/api";

@@ -1,7 +1,8 @@
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 import podeCriarOcorrencia from "../../../utils/PodeCriarOcorrencia";
-import { allNames } from "../../../utils/gamb";
+import { allUserNames } from "../../../utils/gamb";
+import { Ocorrencia } from "@prisma/client";
 
 export const ocorrenciasRouter = createTRPCRouter({
   minhasOcorrencias: protectedProcedure
@@ -105,28 +106,32 @@ export const ocorrenciasRouter = createTRPCRouter({
       },
     });
 
-    console.log(ocorrencias);
+    let returnData: Record<string, any> = [];
 
-    let returnDate: any = allNames().map((name) => {
-      return [name, "", 0];
-    });
-
-    console.log(returnDate);
-
-    returnDate = returnDate.map((item: any) => {
-      const ocorrencia = ocorrencias.find(
-        (ocorrencia) => ocorrencia.receptor.nome === item[0]
-      );
-
-      if (ocorrencia) {
-        item[1] = item[1] + ocorrencia.titulo;
-        item[2] = item[2] + 
-        ocorrencia.pontosGanhos;
+    ocorrencias.forEach((ocorrencia) => {
+      if (returnData[ocorrencia.receptor.username]) {
+        returnData[ocorrencia.receptor.username].desc +=
+          ocorrencia.descricao + " | ";
+        returnData[ocorrencia.receptor.username].pontos +=
+          +ocorrencia.pontosGanhos;
+      } else {
+        returnData[ocorrencia.receptor.username] = {
+          nome: ocorrencia.receptor.nome,
+          desc: ocorrencia.descricao + " | ",
+          pontos: ocorrencia.pontosGanhos,
+        };
       }
-
-      return item;
     });
 
-    return returnDate;
+    let finalData: Record<string, any> = [];
+
+    Object.values(returnData).forEach((key) => {
+      finalData.push(Object.values(key));
+    });
+
+    console.log(returnData);
+    console.log(finalData);
+
+    return finalData;
   }),
 });

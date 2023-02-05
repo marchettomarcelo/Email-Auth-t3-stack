@@ -62,7 +62,12 @@ function allNames() {
   return pessoas.map(({ nome }) => nome);
 }
 
+function allUserNames() {
+  return pessoas.map(({ email }) => email.split("@")[0]);
+}
+
 export {
+  allUserNames,
   allNames,
   allEmails,
   allEmailsByArea,
