@@ -1,8 +1,8 @@
+/* eslint-disable */
+
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 import podeCriarOcorrencia from "../../../utils/PodeCriarOcorrencia";
-import { allUserNames } from "../../../utils/gamb";
-import { Ocorrencia } from "@prisma/client";
 
 export const ocorrenciasRouter = createTRPCRouter({
   minhasOcorrencias: protectedProcedure
