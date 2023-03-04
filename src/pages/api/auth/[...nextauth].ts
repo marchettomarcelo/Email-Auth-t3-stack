@@ -96,6 +96,8 @@ export const authOptions: NextAuthOptions = {
         }
       },
     }),
+
+  
     /**
      * ...add more providers here
      *
@@ -106,6 +108,10 @@ export const authOptions: NextAuthOptions = {
      * @see https://next-auth.js.org/providers/github
      */
   ],
+
+  pages:{
+    signIn: "/login",
+  }
 };
 
 export default NextAuth(authOptions);
