@@ -6,14 +6,15 @@ function CriarOcorrencias() {
   const { username } = useRouter().query;
 
   // ------ trcp stuff ------
-  const { data } = api.ocorrencias.podeCriarOcorrencia.useQuery(
-    {
-      username: username as string,
-    },
-    {
-      enabled: !!username,
-    }
-  );
+  const { data: podeVisualizarConteudo } =
+    api.ocorrencias.podeVisualizarConteudo.useQuery(
+      {
+        username: username as string,
+      },
+      {
+        enabled: !!username,
+      }
+    );
 
   const { data: profileData } = api.profile.getProfileFromUsername.useQuery(
     { username: username as string },
@@ -31,7 +32,7 @@ function CriarOcorrencias() {
 
   // ------------
 
-  if (data === true) {
+  if (podeVisualizarConteudo === true) {
     interface Values {
       titulo: string;
       descricao: string;
@@ -106,7 +107,7 @@ function CriarOcorrencias() {
         </Formik>
       </div>
     );
-  } else if (data === false) {
+  } else if (podeVisualizarConteudo === false) {
     console.log("Voce nao pode criar ocorrencias para essa pessoa");
     return <></>;
   } else {

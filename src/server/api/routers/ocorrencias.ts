@@ -45,7 +45,7 @@ export const ocorrenciasRouter = createTRPCRouter({
       }
     }),
 
-  podeCriarOcorrencia: protectedProcedure
+  podeVisualizarConteudo: protectedProcedure
     .input(z.object({ username: z.string() }))
     .query(async ({ ctx, input }) => {
       const podeCriar = await podeCriarOcorrencia({

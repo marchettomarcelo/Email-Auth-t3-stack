@@ -77,21 +77,8 @@ export const authOptions: NextAuthOptions = {
         const transport = createTransport(server);
 
         const validEmails = allEmails();
-        if (!validEmails.includes(email)) {
-          const result = await transport.sendMail({
-            to: email,
-            from: from,
-            subject: `Não foi possivel logar no site: ${host}`,
-            text: `Você não tem acesso a esse site.`,
-          });
-
-          const failed = result.rejected.concat(result.pending).filter(Boolean);
-          if (failed.length) {
-            throw new Error(
-              `Email(s) (${failed.join(", ")}) could not be sent`
-            );
-          }
-        } else {
+        if (validEmails.includes(email)) {
+           
           const result = await transport.sendMail({
             to: email,
             from: from,
@@ -100,6 +87,7 @@ export const authOptions: NextAuthOptions = {
           });
 
           const failed = result.rejected.concat(result.pending).filter(Boolean);
+          
           if (failed.length) {
             throw new Error(
               `Email(s) (${failed.join(", ")}) could not be sent`

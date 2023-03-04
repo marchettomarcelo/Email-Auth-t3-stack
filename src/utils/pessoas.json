@@ -14,8 +14,15 @@
     "cargo": "MEMBRO"
   },
   {
+    "nome": "Marcelo Marchetto Insper",
+    "email": "marcelovfm@al.insper.edu.br",
+    "areas": ["FINANCEIRO"],
+    "projetos": [],
+    "cargo": "DIRETOR"
+  },
+  {
     "nome": "Alessia Pace",
-    "areas": ["Gestão de Pessoas"],
+    "areas": ["GP"],
     "projetos": [],
     "email": "alessiap@al.insper.edu.br",
     "cargo": "DIRETOR"
@@ -23,90 +30,90 @@
   {
     "nome": "Ana Luiza Paro Heitor",
     "areas": [],
-    "projetos": ["Ambientar"],
+    "projetos": ["AMBIENTAR"],
     "email": "analph@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Beatriz Borges Zackiewicz",
     "areas": [],
-    "projetos": ["Pontuais"],
+    "projetos": ["PONTUAIS"],
     "email": "beatrizbz@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Camila Cardia Consentino",
-    "areas": ["Financeiro"],
-    "projetos": ["Informar"],
+    "areas": ["FINANCEIRO"],
+    "projetos": ["INFORMAR"],
     "email": "camilacc5@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Gabriel Zahar Miné",
-    "areas": ["Gestão de Projetos"],
-    "projetos": ["GAS Challenge"],
+    "areas": ["PROJETOS"],
+    "projetos": ["CHALLENGE"],
     "email": "gabrielzm1@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Gabriela Seitz",
-    "areas": ["Gestão de Projetos"],
-    "projetos": ["Somar"],
+    "areas": ["PROJETOS"],
+    "projetos": ["SOMAR"],
     "email": "gabrielas9@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Gabriela Vanzella Fevereiro",
-    "areas": ["Gestão de Pessoas"],
-    "projetos": ["Pontuais"],
+    "areas": ["GP"],
+    "projetos": ["PONTUAIS"],
     "email": "gabrielavf1@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Georgia Brigagão Cabral",
-    "areas": ["Marketing"],
-    "projetos": ["Social Planning"],
+    "areas": ["MARKETING"],
+    "projetos": ["SOCIAL"],
     "email": "georgiac@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Giulia Carvalho Scripilliti",
-    "areas": ["Gestão de Projetos"],
-    "projetos": ["Alegrarte"],
+    "areas": ["PROJETOS"],
+    "projetos": ["ALEGRARTE"],
     "email": "giuliacs@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Giulia De Micheli Comenalli",
     "areas": [],
-    "projetos": ["Aulas Solidárias"],
+    "projetos": ["AULAS"],
     "email": "giuliamc@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Gustavo Dan Nakano Miyake",
-    "areas": ["Financeiro"],
-    "projetos": ["GAS Challenge"],
+    "areas": ["FINANCEIRO"],
+    "projetos": ["CHALLENGE"],
     "email": "gustavodnm@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Igor Koga Fortunato",
-    "areas": ["Financeiro"],
-    "projetos": ["Camisa 10"],
+    "areas": ["FINANCEIRO"],
+    "projetos": ["CAMISA10"],
     "email": "Igorkf@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Isabela Vinocur Kocinas",
-    "areas": ["Gestão de Pessoas"],
-    "projetos": ["Somar"],
+    "areas": ["GP"],
+    "projetos": ["SOMAR"],
     "email": "isabelavk@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Isabella Marques Brunele",
-    "areas": ["Gestão de Projetos"],
+    "areas": ["PROJETOS"],
     "projetos": [],
     "email": "isabellamb2@al.insper.edu.br",
     "cargo": "DIRETOR"
@@ -114,69 +121,69 @@
   {
     "nome": "Isabella Maués Marangoni",
     "areas": [],
-    "projetos": ["Alegrarte"],
+    "projetos": ["ALEGRARTE"],
     "email": "isabellamm1@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Julia Teixeira Cruz",
-    "areas": ["Financeiro"],
-    "projetos": ["Social Planning"],
+    "areas": ["FINANCEIRO"],
+    "projetos": ["SOCIAL"],
     "email": "juliatc@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Júlia Uliana dos Santos",
-    "areas": ["Marketing"],
-    "projetos": ["Somar"],
+    "areas": ["MARKETING"],
+    "projetos": ["SOMAR"],
     "email": "juliaus@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Laura Anastácio Todari",
-    "areas": ["Gestão de Projetos"],
-    "projetos": ["Camisa 10"],
+    "areas": ["PROJETOS"],
+    "projetos": ["CAMISA10"],
     "email": "laurat1@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Laura Corsini Tovo",
     "areas": [],
-    "projetos": ["Vênus"],
+    "projetos": ["VENUS"],
     "email": "Lauract@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Lucas Muniz Previato",
-    "areas": ["Financeiro"],
-    "projetos": ["MUNdo Insper"],
+    "areas": ["FINANCEIRO"],
+    "projetos": ["MUN"],
     "email": "lucasmp7@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Luisa Blanco Ventura",
     "areas": [],
-    "projetos": ["Somar"],
+    "projetos": ["SOMAR"],
     "email": "luisabv@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Luiza Teodoro de Abreu Coutinho",
     "areas": [],
-    "projetos": ["MUNdo Insper"],
+    "projetos": ["MUN"],
     "email": "Luizatac@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Luna Zagari Borba Franco",
-    "areas": ["Gestão de Projetos"],
-    "projetos": ["Vênus"],
+    "areas": ["PROJETOS"],
+    "projetos": ["VENUS"],
     "email": "lunaz@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Manoela Brotherhood Pimentel",
-    "areas": ["Financeiro"],
+    "areas": ["FINANCEIRO"],
     "projetos": [],
     "email": "manoelabp@al.insper.edu.br",
     "cargo": "DIRETOR"
@@ -184,77 +191,70 @@
   {
     "nome": "Maria Vitoria Jardim Sartori",
     "areas": [],
-    "projetos": ["Social Planning"],
+    "projetos": ["SOCIAL"],
     "email": "mariavjs@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
-    "nome": "Mariana Garcia Curtis",
-    "areas": [],
-    "projetos": [],
-    "email": "marianagc5@al.insper.edu.br",
-    "cargo": "LIDER"
-  },
-  {
     "nome": "Mariana Pereira das Candeias",
-    "areas": ["Gestão de Pessoas"],
-    "projetos": ["Ambientar"],
+    "areas": ["GP"],
+    "projetos": ["AMBIENTAR"],
     "email": "marianapc2@al.insper.Edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Mariana Ribeiro Canto",
     "areas": [],
-    "projetos": ["Informar"],
+    "projetos": ["INFORMAR"],
     "email": "Marianac9@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Matias Reis Millan",
     "areas": [],
-    "projetos": ["Camisa 10"],
+    "projetos": ["CAMISA10"],
     "email": "matiasrm@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Pedro Cardieri Monteiro",
     "areas": [],
-    "projetos": ["GAS Challenge"],
+    "projetos": ["CHALLENGE"],
     "email": "pedrocm6@al.insper.edu.br",
     "cargo": "LIDER"
   },
   {
     "nome": "Pedro Ribeiro Lodi",
-    "areas": ["Financeiro"],
-    "projetos": ["Pontuais"],
+    "areas": ["FINANCEIRO"],
+    "projetos": ["PONTUAIS"],
     "email": "pedrorl1@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Rafaela Murta Tomazela",
-    "areas": ["Marketing"],
+    "areas": ["MARKETING"],
     "projetos": [],
     "email": "rafaelamt1@al.insper.edu.br",
     "cargo": "DIRETOR"
   },
   {
     "nome": "Theo Decourt",
-    "areas": ["Gestão de Projetos"],
-    "projetos": ["Informar"],
+    "areas": ["PROJETOS"],
+    "projetos": ["INFORMAR"],
     "email": "theod@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Victor Jabali Gugliotta da Costa",
-    "areas": ["Financeiro"],
-    "projetos": ["Ambientar"],
+    "areas": ["FINANCEIRO"],
+    "projetos": ["AMBIENTAR"],
     "email": "victorjgc@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Willian Natale Pedro",
-    "areas": ["Gestão de Pessoas"],
-    "projetos": ["Social Planning"],
+    "areas": ["GP"],
+    "projetos": ["SOCIAL"],
     "email": "williannp@al.insper.edu.br",
     "cargo": "MEMBRO"
   }
