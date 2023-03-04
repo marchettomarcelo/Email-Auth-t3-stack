@@ -49,7 +49,7 @@ function CriarOcorrencias() {
             descricao: "",
             pontos: 0,
           }}
-          onSubmit={  (values: Values) => {
+          onSubmit={(values: Values) => {
             criarOcorrencia.mutate({
               descricao: values.descricao,
               titulo: values.titulo,
@@ -67,7 +67,7 @@ function CriarOcorrencias() {
                 id="titulo"
                 name="titulo"
                 className="rounded border border-black p-2"
-                placeholder="escreve alguma coisa ai sla"
+                placeholder="Título da Advertência"
               />
             </div>
 
@@ -79,7 +79,7 @@ function CriarOcorrencias() {
                 id="descricao"
                 className="rounded border border-black p-2"
                 name="descricao"
-                placeholder="cometeu um crime"
+                placeholder="Descrição da Advertência"
               />
             </div>
 
@@ -100,7 +100,7 @@ function CriarOcorrencias() {
               type="submit"
               className="m-2 w-48 rounded border-2 border-gray-200 py-4 px-8 text-lg font-bold shadow-2xl"
             >
-              Submit
+              Criar
             </button>
           </Form>
         </Formik>
@@ -110,7 +110,7 @@ function CriarOcorrencias() {
     console.log("Voce nao pode criar ocorrencias para essa pessoa");
     return <></>;
   } else {
-    return <></>;
+    return <>Carregando...</>;
   }
 }
 
