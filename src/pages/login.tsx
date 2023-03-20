@@ -7,9 +7,20 @@ import {
 import { useState } from "react";
 import BaseLayout from "../components/BaseLayout";
 
-function signin() {
+export default function SignInPage({ providers, csrfToken }:any) {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const handleSignIn = async () => {
+    try {
+      setLoading(true);
+      await signIn("email", { email });
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
+
   return (
     <BaseLayout>
       <div className="flex w-full flex-col items-center gap-8">
@@ -26,7 +37,7 @@ function signin() {
             />
             <button
               className="m-2 w-1/2 rounded border-2 border-gray-200 py-4 px-8 text-lg font-bold shadow-2xl"
-              onClick={() => {signIn("email", { email }); setLoading(true)}  }
+              onClick={handleSignIn}
             >
               Entrar
             </button>
@@ -39,8 +50,6 @@ function signin() {
   );
 }
 
-export default signin;
-
 export async function getServerSideProps(context: any) {
   const { req } = context;
   const session = await getSession({ req });
@@ -51,10 +60,10 @@ export async function getServerSideProps(context: any) {
     };
   }
 
+  const providers = await getProviders();
+  const csrfToken = await getCsrfToken(context);
+
   return {
-    props: {
-      providers: await getProviders(),
-      csrfToken: await getCsrfToken(context),
-    },
+    props: { providers, csrfToken },
   };
 }
