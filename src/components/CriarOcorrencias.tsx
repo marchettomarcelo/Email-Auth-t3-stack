@@ -7,7 +7,7 @@ function CriarOcorrencias() {
 
   // ------ trcp stuff ------
   const { data: podeVisualizarConteudo } =
-    api.ocorrencias.podeVisualizarConteudo.useQuery(
+    api.ocorrencias.podeCriarOcorrencias.useQuery(
       {
         username: username as string,
       },
@@ -111,7 +111,7 @@ function CriarOcorrencias() {
     console.log("Voce nao pode criar ocorrencias para essa pessoa");
     return <></>;
   } else {
-    return <>Carregando...</>;
+    return <></>;
   }
 }
 

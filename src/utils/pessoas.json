@@ -257,5 +257,194 @@
     "projetos": ["SOCIAL"],
     "email": "williannp@al.insper.edu.br",
     "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Alexandre Lotito",
+    "areas": ["GP"],
+    "projetos": ["MUN"],
+    "email": "alexandrencl@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Ana Berger",
+    "areas": ["PROJETOS"],
+    "projetos": ["MUN"],
+    "email": "anajsg@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Ana Júlia Santos",
+    "areas": ["MARKETING"],
+    "projetos": [],
+    "email": "anasb@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Eduardo Del'Hoyo",
+    "areas": ["GP"],
+    "projetos": ["ALEGRARTE"],
+    "email": "eduardodhf@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Eduardo Samarco",
+    "areas": ["MARKETING"],
+    "projetos": ["AULAS"],
+    "email": "eduardosa9@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Elora Rocha",
+    "areas": ["MARKETING"],
+    "projetos": ["AMBIENTAR"],
+    "email": "elorarr@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Erick Cruz",
+    "areas": ["FINANCEIRO"],
+    "projetos": ["AULAS"],
+    "email": "erickmc@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Estela Cabral",
+    "areas": ["GP"],
+    "projetos": ["CHALLENGE"],
+    "email": "estelacc@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Gabriela Dabdab",
+    "areas": ["PROJETOS"],
+    "projetos": ["AULAS"],
+    "email": "gabrieladc1@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Giorgio Zucarelli",
+    "areas": ["MARKETING"],
+    "projetos": ["INFORMAR"],
+    "email": "giorgiopz@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Giovanna Manente",
+    "areas": ["GP"],
+    "projetos": ["AULAS"],
+    "email": "giovannagm1@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Gustavo Casacow",
+    "areas": ["GP"],
+    "projetos": [],
+    "email": "gustavocs3@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Isadora Fibra",
+    "areas": ["FINANCEIRO"],
+    "projetos": [],
+    "email": "isadorapf@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Joaquim Silva",
+    "areas": ["FINANCEIRO"],
+    "projetos": ["ALEGRARTE"],
+    "email": "joaquimscb@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Júlia Basaglia",
+    "areas": ["MARKETING"],
+    "projetos": ["CAMISA10"],
+    "email": "juliapb@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Juliana Martins",
+    "areas": ["GP"],
+    "projetos": [],
+    "email": "julianamq@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Lara Arana",
+    "areas": ["MARKETING"],
+    "projetos": ["MUN"],
+    "email": "laraaf@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Livia Moraes",
+    "areas": ["MARKETING"],
+    "projetos": ["ALEGRARTE"],
+    "email": "liviam1@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Luana Salume",
+    "areas": ["MARKETING"],
+    "projetos": ["CHALLENGE"],
+    "email": "luanaws@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Manuela Arbex",
+    "areas": ["PROJETOS"],
+    "projetos": ["AULAS"],
+    "email": "manuelaolah@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Maria Eduarda Torres",
+    "areas": ["PROJETOS"],
+    "projetos": ["SOCIAL"],
+    "email": "mariaegt@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Mariana Watanabe",
+    "areas": ["FINANCEIRO"],
+    "projetos": ["VENUS"],
+    "email": "marianatw@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Pedro Peres",
+    "areas": ["PROJETOS"],
+    "projetos": ["AMBIENTAR"],
+    "email": "pedropf2@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Rafael Facuri",
+    "areas": ["MARKETING"],
+    "projetos": ["AULAS"],
+    "email": "rafaelf6@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Roberta Danesi",
+    "areas": ["PROJETOS"],
+    "projetos": ["PONTUAIS"],
+    "email": "robertabd@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Sérgio Maggiore",
+    "areas": ["MARKETING"],
+    "projetos": ["PONTUAIS"],
+    "email": "sergioma@al.insper.edu.br",
+    "cargo": "MEMBRO"
+  },
+  {
+    "nome": "Thiago Gonçalves",
+    "areas": ["GP"],
+    "projetos": ["CAMISA10"],
+    "email": "thiagoggs@al.insper.edu.br",
+    "cargo": "MEMBRO"
   }
 ]

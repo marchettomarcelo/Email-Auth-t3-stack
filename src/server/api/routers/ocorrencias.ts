@@ -3,6 +3,8 @@
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 import podeCriarOcorrencia from "../../../utils/PodeCriarOcorrencia";
+import podeVisualizarOcorrencia from "../../../utils/PodeVisualizarOcorrencia";
+
 
 export const ocorrenciasRouter = createTRPCRouter({
   minhasOcorrencias: protectedProcedure
@@ -45,7 +47,7 @@ export const ocorrenciasRouter = createTRPCRouter({
       }
     }),
 
-  podeVisualizarConteudo: protectedProcedure
+  podeCriarOcorrencias: protectedProcedure
     .input(z.object({ username: z.string() }))
     .query(async ({ ctx, input }) => {
       const podeCriar = await podeCriarOcorrencia({
@@ -54,6 +56,17 @@ export const ocorrenciasRouter = createTRPCRouter({
       });
 
       return podeCriar;
+    }),
+
+  podeVerOcorrencias: protectedProcedure
+    .input(z.object({ username: z.string() }))
+    .query(async ({ ctx, input }) => {
+      const podeVisualizar = await podeVisualizarOcorrencia({
+        loggedUserId: ctx.session.user.id,
+        username: input.username,
+      })
+
+      return podeVisualizar;
     }),
 
   criarOcorrencia: protectedProcedure

@@ -5,7 +5,7 @@ import CardOcorrencia from "./CardOcorrencia";
 function MinhasOcorrencias() {
   const { username } = useRouter().query;
   const { data: podeVisualizarConteudo } =
-    api.ocorrencias.podeVisualizarConteudo.useQuery(
+    api.ocorrencias.podeVerOcorrencias.useQuery(
       {
         username: username as string,
       },
@@ -13,6 +13,8 @@ function MinhasOcorrencias() {
         enabled: !!username,
       }
     );
+
+  console.log(podeVisualizarConteudo);
 
   const { data, error } = api.ocorrencias.minhasOcorrencias.useQuery(
     {
@@ -22,6 +24,8 @@ function MinhasOcorrencias() {
       enabled: !!username,
     }
   );
+
+  console.log(data);
 
   if (!podeVisualizarConteudo) {
     return null;

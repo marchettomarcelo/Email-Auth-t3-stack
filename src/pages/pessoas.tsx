@@ -19,7 +19,7 @@ function DiretorioMembros() {
               <h2 className="text-xl font-bold">{pessoa.nome}</h2>
 
               <div className="flex w-full flex-row gap-2">
-                <p>Cargo: {pessoa.cargo} </p> <p>Área: {pessoa.areas}</p>{" "}
+                <p>Cargo: {pessoa.cargo} </p>{pessoa.areas[0] && <p>Área: {pessoa.areas}</p>}
                 {pessoa.projetos.length !== 0 && (
                   <p>Projeto: {pessoa.projetos}</p>
                 )}
