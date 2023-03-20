@@ -18,10 +18,8 @@ export const authOptions: NextAuthOptions = {
     },
   },
   events: {
-
     async createUser(message) {
       if (!message.user.email) return;
-
 
       const pessoa = getPersonByEmail(message.user.email) as gasPerson;
 
@@ -34,7 +32,6 @@ export const authOptions: NextAuthOptions = {
       });
 
       if (userExists) {
-        
         await prisma.profile.update({
           where: { username: username },
           data: {
@@ -78,7 +75,6 @@ export const authOptions: NextAuthOptions = {
 
         const validEmails = allEmails();
         if (validEmails.includes(email)) {
-           
           const result = await transport.sendMail({
             to: email,
             from: from,
@@ -87,7 +83,7 @@ export const authOptions: NextAuthOptions = {
           });
 
           const failed = result.rejected.concat(result.pending).filter(Boolean);
-          
+
           if (failed.length) {
             throw new Error(
               `Email(s) (${failed.join(", ")}) could not be sent`
@@ -97,7 +93,6 @@ export const authOptions: NextAuthOptions = {
       },
     }),
 
-  
     /**
      * ...add more providers here
      *
@@ -109,9 +104,9 @@ export const authOptions: NextAuthOptions = {
      */
   ],
 
-  pages:{
-    signIn: "/login",
-  }
+  pages: {
+    signIn: "/signin",
+  },
 };
 
 export default NextAuth(authOptions);
