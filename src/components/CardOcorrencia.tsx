@@ -1,5 +1,6 @@
 import { type Ocorrencia, type Profile } from "@prisma/client";
 import Link from "next/link";
+import DeletarOcorrenciaButton from "./DeletarOcorrenciaButton";
 
 function CardOcorrencia({
   ocorrencia,
@@ -32,6 +33,7 @@ function CardOcorrencia({
           {responsavel.nome}
         </Link>
       </h3>
+      <DeletarOcorrenciaButton id={ocorrencia.id} />
     </div>
   );
 }

@@ -9,24 +9,29 @@ function DiretorioMembros() {
     <BaseLayout>
       <h1 className="text-2xl font-bold">Todos os integrantes do gas:</h1>
       <div className="flex w-full flex-col items-center gap-4">
-        {pessoas.data?.map((pessoa) => (
-          <Link
-            href={`/pessoas/${pessoa.username}`}
-            key={pessoa.id}
-            className=" w-full rounded-md border p-4 shadow-md"
-          >
-            <div className="flex w-full flex-col gap-1">
-              <h2 className="text-xl font-bold">{pessoa.nome}</h2>
+        {pessoas.data?.map(
+          (pessoa) =>
+            pessoa.username != "marchetto.marcelo" &&
+            pessoa.username != "marcelovfm" && (
+              <Link
+                href={`/pessoas/${pessoa.username}`}
+                key={pessoa.id}
+                className=" w-full rounded-md border p-4 shadow-md"
+              >
+                <div className="flex w-full flex-col gap-1">
+                  <h2 className="text-xl font-bold">{pessoa.nome}</h2>
 
-              <div className="flex w-full flex-row gap-2">
-                <p>Cargo: {pessoa.cargo} </p>{pessoa.areas[0] && <p>Área: {pessoa.areas}</p>}
-                {pessoa.projetos.length !== 0 && (
-                  <p>Projeto: {pessoa.projetos}</p>
-                )}
-              </div>
-            </div>
-          </Link>
-        ))}
+                  <div className="flex w-full flex-row gap-2">
+                    <p>Cargo: {pessoa.cargo} </p>
+                    {pessoa.areas[0] && <p>Área: {pessoa.areas}</p>}
+                    {pessoa.projetos.length !== 0 && (
+                      <p>Projeto: {pessoa.projetos}</p>
+                    )}
+                  </div>
+                </div>
+              </Link>
+            )
+        )}
       </div>
     </BaseLayout>
   );

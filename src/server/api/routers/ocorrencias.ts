@@ -58,6 +58,26 @@ export const ocorrenciasRouter = createTRPCRouter({
       return podeCriar;
     }),
 
+  deletarOcorrencia: protectedProcedure
+  .input(z.object({ id: z.string(), username: z.string() })).mutation(async ({ ctx, input }) => {
+     const podeCriar = await podeCriarOcorrencia({
+       loggedUserId: ctx.session.user.id,
+       username: input.username,
+     });
+
+     if (podeCriar){
+        const ocorrencia = await ctx.prisma.ocorrencia.delete({
+          where: {
+            id: input.id
+          }
+        })
+        return ocorrencia;
+     }
+
+      throw new Error("Você não pode deletar essa ocorrência");
+
+  }),
+
   podeVerOcorrencias: protectedProcedure
     .input(z.object({ username: z.string() }))
     .query(async ({ ctx, input }) => {
