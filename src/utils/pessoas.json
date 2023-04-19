@@ -275,7 +275,7 @@
   {
     "nome": "Ana Júlia Santos",
     "areas": ["MARKETING"],
-    "projetos": [],
+    "projetos": ["VENUS"],
     "email": "anasb@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
@@ -366,7 +366,7 @@
   {
     "nome": "Juliana Martins",
     "areas": ["GP"],
-    "projetos": [],
+    "projetos": ["VENUS"],
     "email": "julianamq@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
