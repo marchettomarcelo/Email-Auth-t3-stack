@@ -338,14 +338,14 @@
   {
     "nome": "Gustavo Casacow",
     "areas": ["GP"],
-    "projetos": [],
+    "projetos": ["INFORMAR"],
     "email": "gustavocs3@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
   {
     "nome": "Isadora Fibra",
     "areas": ["FINANCEIRO"],
-    "projetos": [],
+    "projetos": ["SOMAR"],
     "email": "isadorapf@al.insper.edu.br",
     "cargo": "MEMBRO"
   },
