@@ -45,7 +45,7 @@ function PerfilPessoas() {
         {(data?.projetos[0]) ? (
           <h3 className="text-xl font-medium">
             {" "}
-            Faz do projeto: <strong>{data?.projetos}</strong>
+            Faz parte do projeto: <strong>{data?.projetos}</strong>
           </h3>
         ) : null}
         {data?.areas[0] ? (
