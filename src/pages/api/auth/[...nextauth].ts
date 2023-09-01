@@ -19,6 +19,7 @@ export const authOptions: NextAuthOptions = {
   },
   events: {
     async createUser(message) {
+      
       if (!message.user.email) return;
 
       const pessoa = getPersonByEmail(message.user.email) as gasPerson;

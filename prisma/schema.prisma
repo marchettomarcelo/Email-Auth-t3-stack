@@ -113,7 +113,7 @@ model Ocorrencia {
 
   pontosGanhos Int
 
-  responsavel   Profile @relation("responsavel", fields: [responsavelId], references: [id])
+  responsavel   Profile @relation("responsavel", fields: [responsavelId], references: [id], onDelete: Cascade)
   responsavelId String  
 
   receptor   Profile @relation("receptor", fields: [receptorId], references: [id], onDelete: Cascade)
